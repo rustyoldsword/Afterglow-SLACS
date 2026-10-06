@@ -1,0 +1,101 @@
+name: slpube
+alias: ubecum
+help: "SexLab P+ 2.18 cum patch: SLACS SCO overlays, UBE detection via RaceCompatibilityCondition"
+script: SLPPlusUBECum
+subs:
+  - name: status
+    alias: s
+    func: Status
+    help: "Show race detection for the player, native-overlay state and the texture path P+ would use"
+    args: []
+
+  - name: native
+    alias: n
+    func: SetNative
+    help: "SexLab P+ built-in cum overlays: 1 = on, 0 = off (default; SLACS SCO draws them instead)"
+    args:
+      - name: enabled
+        alias: e
+        type: Int
+        default: "0"
+
+  - name: rebuild
+    alias: r
+    func: SetRebuild
+    help: "Rebuild the actor's 3D after applying cum: 1 = on (default), 0 = off (faster, test that cum still shows up at once)"
+    args:
+      - name: enabled
+        alias: e
+        type: Int
+        default: "1"
+
+  - name: head
+    alias: h
+    func: HeadInfo
+    help: "Show the textures/specular actually on the head mesh of the player (and the actor under the crosshair)"
+    args: []
+
+  - name: treatas
+    alias: t
+    func: TreatAs
+    help: "Force how SexLab P+ treats the player's sex: 0 male, 1 female, 2 futa (see 'slpube status' first)"
+    args:
+      - name: sex
+        alias: s
+        type: Int
+        default: "1"
+
+  - name: debug
+    alias: d
+    func: SetDebug
+    help: "Console logging on every cum overlay: 1 = on, 0 = off"
+    args:
+      - name: enabled
+        alias: e
+        type: Int
+        default: "1"
+
+  - name: vaginal
+    alias: v
+    func: Vaginal
+    help: "Apply vaginal cum fx to the player (goes through SexLab P+, so SLACS reacts too)"
+    args:
+      - name: layers
+        alias: l
+        type: Int
+        default: "1"
+
+  - name: anal
+    alias: a
+    func: Anal
+    help: "Apply anal cum fx to the player"
+    args:
+      - name: layers
+        alias: l
+        type: Int
+        default: "1"
+
+  - name: oral
+    alias: o
+    func: Oral
+    help: "Apply oral cum fx to the player (face + breast in SLACS)"
+    args:
+      - name: layers
+        alias: l
+        type: Int
+        default: "1"
+
+  - name: all
+    func: All
+    help: "Apply all three cum fx types to the player"
+    args:
+      - name: layers
+        alias: l
+        type: Int
+        default: "1"
+
+  - name: clear
+    alias: c
+    func: Clear
+    help: "Remove all cum fx from the player (SexLab P+ and SLACS)"
+    args: []

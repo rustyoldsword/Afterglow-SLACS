@@ -1,0 +1,8 @@
+.xmake/
+build/
+dist/
+vsxmake*/
+*.log
+__pycache__/
+Source/slacs_src/
+*.pex
