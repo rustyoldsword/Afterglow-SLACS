@@ -19,6 +19,16 @@ Mod page: https://dwemermods.com/mods/4264
 | `Source/recolor_hf.py` | Makes the hand/foot overlays visible (white RGB, alpha x3) |
 | `SKSE/CustomConsole/SLPPlusUBECum.yaml` | `slpube` console commands (`status`, `native`, `rebuild`, ...) |
 
+## SexLab P+ 2.19 build
+
+`SexLab P+ 2.19/Source/Scripts/` holds the two files that differ in the standalone build for SexLab P+ 2.19.0
+(release "Afterglow - SLACS 2 SCO for SexLab P+ 2.19 and UBE"); everything else is the same as above.
+
+| Path | Contents |
+|---|---|
+| `SexLab P+ 2.19/Source/Scripts/sslActorLibrary.patched.pas` | SexLab P+ 2.19.0 `sslActorLibrary` with the same two inserts (UBE texture path in `BeginOverlay`, SexLab's own painting off in `ApplyOverlay` unless `slpube native 1`). The 2.18.1 copy does not fit 2.19 |
+| `SexLab P+ 2.19/Source/Scripts/SLACS_Main.psc` | Fix for cum painted twice per orgasm: a scene with cum tags is painted only from its tags, a scene without them only from SexLab's detection |
+
 ## Overlay slots
 
 Cum is painted into RaceMenu overlay nodes starting at slot 7: Body vaginal 7-12, anal 13-18,
